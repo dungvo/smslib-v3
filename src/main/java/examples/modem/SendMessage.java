@@ -23,7 +23,7 @@ public class SendMessage
 		System.out.println("Example: Send message from a serial gsm modem.");
 		System.out.println(Library.getLibraryDescription());
 		System.out.println("Version: " + Library.getLibraryVersion());
-		SerialModemGateway gateway = new SerialModemGateway("modem.com1", "COM4", 115200, "Huawei", "");
+		SerialModemGateway gateway = new SerialModemGateway("modem.com1", "COM4", 115200, "Nokia", "");
 		gateway.setInbound(true);
 		gateway.setOutbound(true);
 		gateway.setSimPin("0000");
@@ -43,7 +43,7 @@ public class SendMessage
 		System.out.println("  Battery Level: " + gateway.getBatteryLevel() + "%");
 		System.out.println();
 		// Send a message synchronously.
-		OutboundMessage msg = new OutboundMessage("306974000000", "Hello from SMSLib!");
+		OutboundMessage msg = new OutboundMessage("0965006878", "Hello from SMSLib!");
 		Service.getInstance().sendMessage(msg);
 		System.out.println(msg);
 		// Or, send out a WAP SI message.
